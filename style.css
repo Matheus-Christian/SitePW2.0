@@ -8,9 +8,9 @@
 body {
     height: 100vh;
     background-color: #000000;
-    /*background-image: url('https://wwwimage-intl.pplusstatic.com/thumbnails/photos/w1920-q80/cbs_page_attribute/79/21/54/a2a6db8e-5ef3-4a51-9618-97b74bf4642a.jpg');
+    background-image: url('https://wwwimage-intl.pplusstatic.com/thumbnails/photos/w1920-q80/cbs_page_attribute/79/21/54/a2a6db8e-5ef3-4a51-9618-97b74bf4642a.jpg');
     background-size: cover;
-    background-position: center;*/
+    background-position: center;
     
 }
 
@@ -96,7 +96,7 @@ header {
 }
 
 .dropdown_menu.open {
-    height: 150px;
+    height: 148px;
 }
 
 .dropdown_menu li {
