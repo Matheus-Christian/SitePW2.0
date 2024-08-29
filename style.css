@@ -124,18 +124,42 @@ a:hover {
         transform: translate(-100%);
     }
 }
+
+h1 {
+    color: #fff;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 10px;
+}
 .logos {
+    margin-top: 20%;
     overflow: hidden;
-    padding: 60px 0;
+    padding: 40px 0;
     background: #000000;
+    white-space: nowrap;
+    position: relative;
+}
+
+.logos:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100px;
+    background: linear-gradient(to left, rgba(185, 33, 33, 0)), white;
+    z-index: 2;
+}
+.logos:hover .logos-slide {
+    animation-play-state: paused;
 }
 .logos-slide {
-    white-space: nowrap;
-    animation: 10s slide infinite linear;
+    display: inline-block;
+    animation: 30s slide infinite linear;
 }
 .logos-slide img {
-    height: 50px;
-    margin: 0 40px
+    height: 30px;
+    margin: 0 15px
 }
 
 /*RESPPONSIVE DESIGN*/
@@ -152,6 +176,9 @@ a:hover {
     .dropdown_menu {
         display: block;
     }
+    .logos {
+        margin-top: 80%;
+    }
 }
 
 @media (max-width: 572px) {
@@ -159,4 +186,7 @@ a:hover {
         left: 2rem;
         width: unset;
     }
+    .logos {
+        margin-top: 90%;
+}
 }
