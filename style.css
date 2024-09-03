@@ -7,11 +7,15 @@
 
 body {
     height: 100vh;
-    background-color: #390893;
-    
+    background-color: #300893;
 }
 
 /*<header style>*/
+
+.planos img{
+    width: 100%;
+    padding-bottom: 2%;
+}
 
 li{
     list-style: none;
