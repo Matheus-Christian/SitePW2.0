@@ -1,42 +1,38 @@
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 body {
-    height: 100vh;
     background-color: #1403ff;
+    height: 100vh;
+    width: 100%;
+    
 }
 
-/*<header style>*/
+/*--header style--*/
 
 .planos img{
     width: 100%;
     padding-top: 2%;
     padding-bottom: 0;
 }
-
 li{
     list-style: none;
 }
-
 a{
     text-decoration: none;
     color: #fff;
     font-size: 1rem;
 }
-
 a:hover {
     color: orange;
 }
-
 .header {
     position: relative;
     padding: 0 2rem;
 }
-
 .navbar {
     width: 100%;
     height: 60px;
@@ -46,23 +42,19 @@ a:hover {
     align-items: center;
     justify-content: space-between;
 }
-
 .navbar .logo {
     padding-top: 15px;
 }
-
 .navbar .links {
     display: flex;
     gap: 2rem;
 }
-
 .navbar .toggle_btn {
     color: #fff;
     font-size: 1.5rem;
     cursor: pointer;
     display: none;
 }
-
 .action_btn {
     background-color: orange;
     color: #fff;
@@ -75,15 +67,14 @@ a:hover {
     cursor: pointer;
     transition: scale 0.2 ease;
 }
-
 .action_btn:hover {
     scale: 1.05;
     color: #fff;
 }
-
 .action_btn:active {
     scale: 0.95
 }
+
 /*DROPDOWN MENU*/
 .dropdown_menu {
     display: none;
@@ -98,27 +89,23 @@ a:hover {
     overflow: hidden;
     transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
-
 .dropdown_menu.open {
-    height: 148px;
+    height: 100px;
 }
-
 .dropdown_menu li {
-    padding: 0.7rem;
+    padding: 0.2rem;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-
 .dropdown_menu .action_btn {
     width: 100%;
     display: flex;
     justify-content: center;
 }
-/* <header style/> */
+/*--Fim header style --*/
 
-/* <brand style */
-
+/*--brand style--*/
 @keyframes slide {
     from {
         transform: translateX(0);
@@ -127,8 +114,6 @@ a:hover {
         transform: translate(-100%);
     }
 }
-
-
 .logos {
     margin-top: 20%;
     overflow: hidden;
@@ -137,7 +122,6 @@ a:hover {
     white-space: nowrap;
     position: relative;
 }
-
 .logos:before {
     position: absolute;
     top: 0;
@@ -159,6 +143,69 @@ a:hover {
     margin: 0 15px
 }
 
+/*--Card--*/
+.wrapper {
+    padding: 10px 10%;
+}
+.card-area {
+    padding: 50px 0;
+}
+
+.caixa-area {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+
+.caixa {
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 5);
+}
+.caixa img {
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    transition: 0.5s;
+}
+
+.overlay {
+    height: 0;
+    width: 100%;
+    background: #fff;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 10px;
+    transition: height 0.5s;
+}
+
+.overlay a {
+    margin-top: 10px;
+    color: #1403ff;
+    text-decoration: none;
+    font-size: 2rem;
+    text-transform: uppercase;
+    
+    text-align: center;
+    padding: 5px 15px;
+}
+
+.caixaLhover img {
+    transform: scale(1.2);
+}
+
+.caixa:hover .overlay{
+    height: 20%;
+}
+
 /*RESPPONSIVE DESIGN*/
 @media (max-width: 992px) {
     .navbar .links,
@@ -176,6 +223,11 @@ a:hover {
     .logos {
         margin-top: 0;
     }
+
+    .wrapper {
+        padding-top: 15%;
+    }
+
 }
 
 @media (max-width: 572px) {
